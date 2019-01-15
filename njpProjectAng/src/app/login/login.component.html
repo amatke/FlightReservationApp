@@ -1,0 +1,13 @@
+<H3 align="center">
+  Prijava korisnika
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+
+<form #l="ngForm" (ngSubmit)="doLogin(l.value)">
+  <p>Username (email) <input type="username" name="username" ngModel > </p>
+  <p>Password <input type="password" name="pass" ngModel > </p>
+  <p>Remember me <input id="rem1" type="checkbox" name="rememberMe" (click)="check('rem1')"> </p>
+  <p> <button type="submit">Login</button> </p>
+</form>

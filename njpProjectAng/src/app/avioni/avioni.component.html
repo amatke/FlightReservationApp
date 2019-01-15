@@ -1,0 +1,44 @@
+<H3 align="center">
+  Avioni
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+<p id="dodavanjeAviona"> <a routerLink="/dodajAvion" >Dodaj novi avion</a> </p>
+<br>
+
+
+<TABLE BORDER="2" >
+  <TR align="center">
+    <TD  WIDTH=200><B>ID</B>
+    <TD  WIDTH=200><B>Marka</B>
+    <TD  WIDTH=140><B>Model</B>
+    <TD  WIDTH=140><B>Ukupno sedista</B>
+    <TD  WIDTH=140><B>Redova</B>
+    <TD  WIDTH=140><B>Kolona</B>
+    <TD  WIDTH=140><B>Sedista u koloni</B>
+    <TD  WIDTH=140><B>Max dolet</B>
+    <TD  WIDTH=140><B>Brzina letenja</B>
+    <TD  WIDTH=140><B>Dodeli let</B>
+  </TR>
+
+  <TR *ngFor="let k of avioni" align="center" id="kupitbl">
+    <td> {{ k.id }} 		</td>
+    <td> {{ k.marka }} 		</td>
+    <td> {{ k.model }}  	</td>
+    <td> {{ k.ukupnoSedista }}  </td>
+    <td> {{ k.redova }}  </td>
+    <td> {{ k.kolona }}  </td>
+    <td> {{ k.sedistaUKoloni }}  </td>
+    <td> {{ k.maxDolet }}  </td>
+    <td> {{ k.brzinaLetenja }}  </td>
+    <TD> <button (click)="dodaj(k.id, k.marka, k.model, k.ukupnoSedista)"> Dodeli </button>  </TD>
+  </TR>
+
+  <br>
+  <tr id="brisanjeAviona" hidden="true">  <input (keyup.enter)="brisiAvion(tekst)" #tekst type="text" placeholder="ID aviona za brisanje"> </tr>
+
+
+</TABLE>
+
+

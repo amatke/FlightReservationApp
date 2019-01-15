@@ -1,0 +1,71 @@
+<H3 align="center">
+  Istorija aktivnosti
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+<div id="div1">
+  <p>Kupljene karte korisnika: {{korisnik}}</p>
+  <TABLE BORDER="2" >
+    <TR align="center">
+      <TD  WIDTH=140><B>Broj karte</B>
+      <TD  WIDTH=140><B>Broj leta</B>
+      <TD  WIDTH=200><B>Destinacija</B>
+      <TD  WIDTH=140><B>Datum i vreme</B>
+      <TD  WIDTH=140><B>Ime i Prezime</B>
+      <TD  WIDTH=140><B>Otkazano</B>
+      <TD  WIDTH=140><B>Cena</B>
+    </TR>
+
+    <TR *ngFor="let k of kupljeno" align="center" >
+      <td> {{ k.id }} 		</td>
+      <td> {{ k.id_leta }} 		</td>
+      <td> {{ k.destinacija }}  	</td>
+      <td> {{ k.datumIvreme }}  </td>
+      <td> {{ k.ime }} {{k.prezime}}  </td>
+      <td> {{ k.otkaziKartu }}  </td>
+      <td> {{ k.cena }}  </td>
+    </TR>
+  </TABLE>
+</div>
+
+
+<div id="div2">
+
+  <br><br>
+  <p>Sve kupljene karte</p>
+
+  <TABLE BORDER="2" id="istorijaKarata">
+
+    <TR align="center">
+      <TD  WIDTH=140><B>Broj karte</B>
+      <TD  WIDTH=140><B>Broj leta</B>
+      <TD  WIDTH=200><B>Destinacija</B>
+      <TD  WIDTH=140><B>Datum i vreme</B>
+      <TD  WIDTH=140><B>Ime i Prezime</B>
+      <TD  WIDTH=140><B>Otkazano</B>
+      <TD  WIDTH=140><B>Cena</B>
+    </TR>
+
+    <TR *ngFor="let k of istorijaKupljeno" align="center" >
+      <td> {{ k.id }} 		</td>
+      <td> {{ k.id_leta }} 		</td>
+      <td> {{ k.destinacija }}  	</td>
+      <td> {{ k.datumIvreme }}  </td>
+      <td> {{ k.ime }} {{k.prezime}}  </td>
+      <td> {{ k.otkaziKartu }}  </td>
+      <td> {{ k.cena }}  </td>
+    </TR>
+  </TABLE>
+
+</div>
+
+
+
+<br><br>
+
+
+
+
+
+

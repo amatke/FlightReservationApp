@@ -1,0 +1,21 @@
+<h1 style="text-align: center;">Dobrodosli u Avio shop!</h1>
+
+
+Ime: {{ime}}  |  prezime: {{prezime}}
+<hr>
+
+
+<div style="margin-left: 2cm;">
+  <p> <a id="loginPage" routerLink="/login" >Login</a> </p>
+  <p id="register"> <a routerLink="/register" >Register</a> </p>
+  <p id="letovi"> <a routerLink="/letovi" >Letovi</a> </p>
+  <p id="avioni" > <a routerLink="/avioni" >Avioni</a> </p>
+  <p id="checkIn"> <a routerLink="/checkIn" >Check in</a> </p>
+  <p id="otkazivanje"> <a routerLink="/odustani" >Otkazivanje</a> </p>
+  <p id="istorija"> <a routerLink="/istorija" >Istorija</a> </p>
+  <p id="korisnici" hidden="true"> <a routerLink="/korisnici" >Korisnici</a> </p>
+
+  <button id="logOut" (click) = doLogout()  >Log out</button>
+</div>
+
+<hr>

@@ -1,0 +1,20 @@
+<H3 align="center">
+  Dodavanje letova
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+<form #f="ngForm" (ngSubmit)="dodaj(f.value)">
+  <p>Broj leta <input type="text" name="brLeta" ngModel > </p>
+  <p>Polaziste <input type="text" name="polaziste" ngModel > </p>
+  <p>Odrediste <input type="text"  name="odrediste" ngModel > </p>
+  <p>Datum i vreme polaska ( DD/MM/YYY-HH:mm ) <input type="text" name="datumIvremePolaska" ngModel > </p>
+  <p>Datum i vreme dolaska ( DD/MM/YYY-HH:mm ) <input type="text" name="datumIvremeDolaska" ngModel > </p>
+  <p>Razdaljina izmedju destinacija <input type="text" name="razdaljina" ngModel > </p>
+  <p>Cena<input type="text" name="cena" ngModel > </p>
+  <p> <button type="submit">Dodaj</button> </p>
+</form>
+
+
+
+

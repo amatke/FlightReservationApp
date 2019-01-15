@@ -1,0 +1,35 @@
+<H3 align="center">
+  Letovi
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+
+
+<TABLE BORDER="2" >
+  <TR align="center">
+    <TD  WIDTH=200><B>ID korisnika</B>
+    <TD  WIDTH=200><B>Ime</B>
+    <TD  WIDTH=140><B>Prezime</B>
+    <TD  WIDTH=140><B>Email</B>
+    <TD  WIDTH=140><B>Korisnik</B>
+    <TD  WIDTH=140><B>Operater</B>
+    <TD  WIDTH=140><B>Admin</B>
+    <TD  WIDTH=140><B>Brisi</B>
+  </TR>
+
+  <TR *ngFor="let k of users" align="center" id="kupitbl">
+    <td> {{ k.id }} 		</td>
+    <td> {{ k.firstName }} 		</td>
+    <td> {{ k.lastName }}  	</td>
+    <td> {{ k.email }}  </td>
+    <td > {{k.korisnik}}  </td>
+    <td> {{ k.operator }}  </td>
+    <td> {{ k.admin }}  </td>
+
+    <TD> <button (click)="brisi(k.id)"> Brisi </button>  </TD>
+  </TR>
+
+</TABLE>
+
+

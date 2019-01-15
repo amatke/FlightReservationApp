@@ -1,0 +1,39 @@
+<H3 align="center">
+  Letovi
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+<p id="dodavanjeLeta" hidden="true"> <a routerLink="/dodajLet" >Dodaj novi let</a> </p>
+
+
+<TABLE BORDER="2" >
+  <TR align="center">
+    <TD  WIDTH=200><B>ID-Broj leta</B>
+    <TD  WIDTH=200><B>Polaziste</B>
+    <TD  WIDTH=140><B>Odrediste</B>
+    <TD  WIDTH=140><B>Datum i vreme polaska</B>
+    <TD  WIDTH=140><B>Datum i vreme dolaska</B>
+    <TD  WIDTH=140><B>Slobodnih mesta</B>
+    <TD  WIDTH=140><B>Cena</B>
+    <TD  WIDTH=140><B>Kupi</B>
+  </TR>
+
+  <TR *ngFor="let k of letovi" align="center" id="kupitbl">
+    <td> {{ k.id }} 		</td>
+    <td> {{ k.polaziste }} 		</td>
+    <td> {{ k.odrediste }}  	</td>
+    <td> {{ k.datumIvremePolaska }}  </td>
+    <td> {{ k.datumIvremeDolaska }}  </td>
+    <td> {{ k.brojSedista - k.zauzetihSedista }}  </td>
+    <td> {{ k.cena }}  </td>
+    <TD> <button (click)="kupi(k.id, k.polaziste, k.odrediste, k.datumIvremePolaska, k.datumIvremeDolaska, k.ukupnoVremePutovanja, k.gate, k.cena)"> Kupi </button>  </TD>
+  </TR>
+
+  <br>
+  <tr id="brisanjeLeta" hidden="true">  <input (keyup.enter)="brisiLet(tekst)" #tekst type="text" placeholder="ID leta za brisanje"> </tr>
+
+</TABLE>
+
+
+

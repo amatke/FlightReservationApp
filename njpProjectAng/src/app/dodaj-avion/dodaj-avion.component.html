@@ -1,0 +1,19 @@
+<H3 align="center">
+  Dodavanje aviona
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+<form #f="ngForm" (ngSubmit)="dodaj(f.value)">
+  <p>Marka <input type="text" name="marka" ngModel > </p>
+  <p>Model <input type="text" name="model" ngModel > </p>
+  <p>Ukupno sedista <input type="text"  name="ukSedista" ngModel > </p>
+  <p>Broj redova <input type="text" name="redova" ngModel > </p>
+  <p>Broj kolona <input type="text" name="brkolona" ngModel > </p>
+  <p>Broj  sedista u koloni<input type="text" name="sedistaUKoloni" ngModel > </p>
+  <p>Maksimalan dolet <input type="text" name="maxDolet" ngModel > </p>
+  <p>Brzina letenja <input type="text" name="brzLetenja" ngModel > </p>
+  <p> <button type="submit">Dodaj</button> </p>
+</form>
+
+

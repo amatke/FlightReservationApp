@@ -1,0 +1,11 @@
+<H3 align="center">
+  Otkazivanje karate
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+<form #f="ngForm" (ngSubmit)="odustani(f.value)">
+  <p>Flight number <input type="text" name="fnumber" ngModel > </p>
+  <p>First name <input type="text" name="fname" ngModel > </p>
+  <p> <button type="submit">Otkazi</button> </p>
+</form>

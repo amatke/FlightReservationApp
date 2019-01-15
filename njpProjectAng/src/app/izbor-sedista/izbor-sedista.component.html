@@ -1,0 +1,28 @@
+<H3 align="center">
+  Izbor sedista
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p>
+
+<p>Flight number: {{id_leta}}</p>
+<p>First name: {{ime}}</p>
+<p>Last name: {{prezime}}</p>
+<p>JMBG: {{jmbg}}</p>
+<hr>
+
+<button (click)="rezervisi()"> Rezervisi </button>
+<br>
+
+<div *ngFor="let r of redova; index as j; " style="margin: auto; width: 50%;" >
+
+    <div *ngFor="let k of kolona; index as y; " >
+      <button style="width:40px; float:left; margin-left: 8px;" id="{{ k + j }}" (click)="zaRezervisanje(k, j)">  {{ k }}{{ j }}   </button>
+      <div *ngIf="y % 6 ==2;">
+        <p style="float:left; margin-left: 28px; margin-right: 28px;"></p>
+      </div>
+    </div>
+    <BR><BR>
+  </div>
+
+
+

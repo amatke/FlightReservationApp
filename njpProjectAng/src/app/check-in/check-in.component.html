@@ -1,0 +1,15 @@
+<H3 align="center">
+  Check in
+</H3>
+
+<p> <a routerLink="" > Pocetna </a>  </p> <br>
+
+<form #f="ngForm" (ngSubmit)="checkIn(f.value)">
+  <p>Flight number <input type="text" name="fnumber" ngModel > </p>
+  <p>First name <input type="text" name="fname" ngModel > </p>
+  <p>Last name <input type="text" name="lname" ngModel > </p>
+  <p>JMBG <input type="text" name="jmbg" ngModel > </p>
+  <p> <button type="submit">Check in</button> </p>
+</form>
+
+
